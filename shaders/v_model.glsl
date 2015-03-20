@@ -2,7 +2,6 @@
 
 uniform PerFrame {
 	mat4 u_ProjectionMatrix;
-	mat4 u_ViewMatrix;
 };
 
 in vec3 in_Position;
