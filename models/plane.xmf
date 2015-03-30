@@ -1,11 +1,19 @@
-# plane
-v 5.0 0.0 -5.0
-v 5.0 0.0 5.0
-v -5.0 0.0 -5.0
-v -5.0 0.0 5.0
+version 2
 
-# indices are 0-3
+o "textures/models/box.png"
 
-# face
-f 0/1/2
-f 1/2/3
+# plane vertices
+v -1.0 0.0 -1.0
+v 0.0 0.0 -1.0
+v -1.0 0.0 0.0
+v 0.0 0.0 0.0
+
+# plane texture coordinates
+uv 0.0 1.0
+uv 1.0 1.0
+uv 0.0 0.0
+uv 1.0 0.0
+
+# plane indices are 0-3
+f 0/2/1 0.0/0.0 1.0/0.0 0.0/1.0
+f 1/2/3 1.0/1.0 0.0/0.0 1.0/1.0
