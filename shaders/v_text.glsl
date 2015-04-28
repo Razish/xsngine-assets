@@ -1,19 +1,20 @@
 #version 140
 
 uniform PerFrame {
-	mat4 u_ProjectionMatrix;
+	mat4 u_projectionMatrix;
+	mat4 u_worldMatrix;
 };
 
-in vec2 in_Position;
-in vec2 in_TexCoord;
-in vec4 in_Colour;
+in vec2 in_position;
+in vec2 in_texCoord;
+in vec4 in_colour;
 
 out vec2 texCoord;
 out vec4 colour;
 
 void main() {
-	gl_Position = u_ProjectionMatrix * vec4( in_Position, 0.0, 1.0 );
+	gl_Position = u_projectionMatrix * vec4( in_position, 0.0, 1.0 );
 
-	texCoord = in_TexCoord;
-	colour = in_Colour;
+	texCoord = in_texCoord;
+	colour = in_colour;
 }
