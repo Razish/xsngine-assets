@@ -1,0 +1,20 @@
+version 1
+
+settings {
+	position		0.0 0.0
+	size			1.0 1.0
+
+	slider {
+		name		"fov slider"
+		position	0.125 0.1
+		size		0.75 0.05
+		cvar		"cg_fov" 60.0 160.0
+
+		/*
+		properties {
+			centered
+			vertical
+		}
+		*/
+	}
+}
