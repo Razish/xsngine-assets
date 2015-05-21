@@ -6,8 +6,8 @@ settings {
 
 	slider {
 		name		"fov slider"
-		position	0.125 0.1
-		size		0.75 0.05
+		position	0.00125 0.1
+		size		0.15 0.03333
 		cvar		"cg_fov" 60.0 160.0
 
 		/*
@@ -16,5 +16,15 @@ settings {
 			vertical
 		}
 		*/
+	}
+
+	button {
+		name		"reload terrain"
+		position	0.33333 0.5
+		size		0.2 0.05
+		text		"Regenerate terrain"
+		font		"menu" 16
+		texture		"textures/ui/button.png"
+		cmd			"reloadTerrain"
 	}
 }
