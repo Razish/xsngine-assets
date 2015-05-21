@@ -1,4 +1,4 @@
-version 1
+version 2
 
 settings {
 	position		0.0 0.0
@@ -9,6 +9,7 @@ settings {
 		position	0.00125 0.1
 		size		0.15 0.03333
 		cvar		"cg_fov" 60.0 160.0
+
 
 		/*
 		properties {
@@ -26,5 +27,15 @@ settings {
 		font		"menu" 16
 		texture		"textures/ui/button.png"
 		cmd			"reloadTerrain"
+	}
+
+	text {
+		name		"test text"
+		position	0.33333 0.5
+		text		"test!"
+		font		"menu" 24
+		properties {
+			centered
+		}
 	}
 }
