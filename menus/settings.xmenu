@@ -1,39 +1,139 @@
-version 2
+version 3
 
 settings {
 	position		0.0 0.0
 	size			1.0 1.0
 
+	// persistence
+	text {
+		name		"terrain persistence text"
+		position	0.00125 0.05
+		text		"Persistence"
+		font		"menu" 16
+	}
 	slider {
-		name		"fov slider"
-		position	0.00125 0.1
-		size		0.15 0.03333
-		cvar		"cg_fov" 60.0 160.0
-
-
-		/*
-		properties {
-			centered
-			vertical
-		}
-		*/
+		name		"terrain persistence slider"
+		position	0.00125 0.075
+		size		0.25 0.03333
+		cvar		"cg_terrainPersistence" 0.0 1.0
+		font		"menu" 16
+		tooltip		"Controls roughness of the terrain"
+		postExec	"reloadTerrain"
+	}
+	text {
+		name		"terrain persistence value"
+		position	0.25 0.075
+		text		"$cg_terrainPersistence"
+		font		"menu" 16
 	}
 
+	// frequency
+	text {
+		name		"terrain frequency text"
+		position	0.00125 0.15
+		text		"Frequency"
+		font		"menu" 16
+	}
+	slider {
+		name		"terrain frequency slider"
+		position	0.00125 0.175
+		size		0.25 0.03333
+		cvar		"cg_terrainFrequency" 0.0 0.5
+		font		"menu" 16
+		tooltip		"Controls complexity of the terrain"
+		postExec	"reloadTerrain"
+	}
+	text {
+		name		"terrain frequency value"
+		position	0.25 0.175
+		text		"$cg_terrainFrequency"
+		font		"menu" 16
+	}
+
+	// amplitude
+	text {
+		name		"terrain amplitude text"
+		position	0.00125 0.25
+		text		"Amplitude"
+		font		"menu" 16
+	}
+	slider {
+		name		"terrain amplitude slider"
+		position	0.00125 0.275
+		size		0.25 0.03333
+		cvar		"cg_terrainAmplitude" 0.0 2.0
+		font		"menu" 16
+		tooltip		"Controls height of the terrain"
+		postExec	"reloadTerrain"
+	}
+	text {
+		name		"terrain amplitude value"
+		position	0.25 0.275
+		text		"$cg_terrainAmplitude"
+		font		"menu" 16
+	}
+
+	// octaves
+	text {
+		name		"terrain octaves text"
+		position	0.00125 0.35
+		text		"Octaves"
+		font		"menu" 16
+	}
+	slider {
+		name		"terrain octaves slider"
+		position	0.00125 0.375
+		size		0.25 0.03333
+		cvar		"cg_terrainOctaves" 1.0 16.0
+		font		"menu" 16
+		tooltip		"Controls detail of the terrain"
+		postExec	"reloadTerrain"
+		properties {
+			integral
+		}
+	}
+	text {
+		name		"terrain octaves value"
+		position	0.25 0.375
+		text		"$cg_terrainOctaves"
+		font		"menu" 16
+	}
+
+	// resolution
+	text {
+		name		"terrain resolution text"
+		position	0.00125 0.45
+		text		"Resolution"
+		font		"menu" 16
+	}
+	slider {
+		name		"terrain resolution slider"
+		position	0.00125 0.475
+		size		0.25 0.03333
+		cvar		"cg_terrainDimensions" 8.0 512.0
+		font		"menu" 16
+		tooltip		"Controls resolution/size of the terrain"
+		postExec	"reloadTerrain"
+		properties {
+			integral
+		}
+	}
+	text {
+		name		"terrain resolution value"
+		position	0.25 0.475
+		text		"$cg_terrainDimensions"
+		font		"menu" 16
+	}
+
+	// reload terrain manually
 	button {
 		name		"reload terrain"
-		position	0.33333 0.5
+		position	0.5 0.5
 		size		0.2 0.05
 		text		"Regenerate terrain"
-		font		"menu" 16
+		font		"menu" 18
 		texture		"textures/ui/button.png"
 		cmd			"reloadTerrain"
-	}
-
-	text {
-		name		"test text"
-		position	0.33333 0.5
-		text		"test!"
-		font		"menu" 24
 		properties {
 			centered
 		}

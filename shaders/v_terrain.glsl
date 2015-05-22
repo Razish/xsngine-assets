@@ -5,15 +5,17 @@ uniform PerFrame {
 };
 
 in vec3 in_Position;
+in vec3 in_Normal;
 in vec2 in_TexCoord;
-in vec4 in_Colour;
 
-out vec4 colour;
 out vec2 texCoord;
+out vec3 normal;
+out float height;
 
 void main() {
 	gl_Position = u_ProjectionMatrix * vec4( in_Position, 1.0 );
 
-	colour = in_Colour;
 	texCoord = in_TexCoord;
+	normal = in_Normal;
+	height = in_Position.y;
 }
