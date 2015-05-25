@@ -51,7 +51,7 @@ void main() {
 	);
 
 	// global light source, i.e. the sun
-	vec3 directionalColour = vec3( 1.0, 1.0, 1.0 );
+	vec3 directionalColour = vec3( 1.0, 0.5, 0.5 );
 	float directionalLight = max(
 		0.0,
 		dot(
