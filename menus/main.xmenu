@@ -1,0 +1,46 @@
+version 4
+
+main {
+	position		0.0 0.0
+	size			1.0 1.0
+
+	// join server text
+	text {
+		name		"welcome"
+		position	0.5 0.4
+		text		"Welcome"
+		font		"menu" 16
+		align		left
+		centered
+	}
+
+	textinput {
+		name		"ip"
+		position	0.5 0.45
+		size		0.2 0.05
+		font		"menu" 16
+		texture		"textures/ui/button.png"
+		centered
+	}
+
+	textinput {
+		name		"port"
+		position	0.5 0.5
+		size		0.2 0.05
+		font		"menu" 16
+		texture		"textures/ui/button.png"
+		centered
+	}
+
+	// connect to server
+	button {
+		name		"connect"
+		position	0.5 0.55
+		size		0.2 0.05
+		text		"Connect"
+		font		"menu" 18
+		texture		"textures/ui/button.png"
+		cmd			"connect $ip $port"
+		centered
+	}
+}
